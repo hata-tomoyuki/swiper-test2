@@ -1,0 +1,82 @@
+
+/*----------------------
+
+base
+
+-----------------------*/
+
+* {
+    box-sizing: border-box;
+}
+
+
+*:focus {
+    outline: none;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    letter-spacing: .04em;
+    font-family: "Noto Sans JP","Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+    color: #231815;
+    -webkit-text-size-adjust: 100%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+
+
+.pc {
+    display: block;
+}
+
+.sp {
+    display: none;
+}
+
+.center {
+    text-align: center;
+}
+
+.w-900 {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.opacity {
+    transition: .5s;
+
+    &:hover {
+        opacity: .7;   
+    }
+}
+
+@media screen and (max-width: 1024px) {
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+    
+    .pc {
+        display: none;
+    }
+    .sp {
+        display: block;
+    }
+
+    .opacity {
+        &:hover {
+            opacity: 1;
+            transition: none;
+        }
+    }
+    
+}

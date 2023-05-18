@@ -1,0 +1,58 @@
+@use "sass:math";
+
+//pc-only
+@mixin mq-pc {
+       @media screen and (min-width: 1025px) {
+              @content;
+       }
+}
+
+//pc-1280 - 1024
+@mixin mq-pc-m {
+       @media screen and (max-width: 1280px) {
+              @content;
+       }
+}
+
+
+//pc-1220 - 1024
+@mixin mq-pc-s {
+       @media screen and (max-width: 1220px) {
+              @content;
+       }
+}
+
+//sp-only
+@mixin mq-sp {
+       @media screen and (max-width: 1024px) {
+              @content;
+       }
+}
+
+//SP 横
+@mixin mq-sp-land {
+       @media screen and (orientation:landscape) and (max-width:1024px) {
+              @content;
+       }
+}
+
+//SP 縦667px以下
+@mixin mq-sp-s {
+       @media screen and (max-height: 667px) {
+              @content;
+       }
+}
+
+//SP 縦540px以下
+@mixin mq-sp-ss {
+       @media screen and (max-height: 540px) {
+              @content;
+       }
+}
+
+
+$viewport: 750; //基準値
+
+@function px2vw($num, $width: $viewport) {
+       @return (1vw * $num / $width * 100);
+}
